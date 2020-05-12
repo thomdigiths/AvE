@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
+import Splash from 'react-native-splash-screen';
 
 import { colors } from 'theme';
+import { useStores } from 'stores';
 
-const SplashScreen = ({}) => {
-  // useEffect(() => {
-  //   Splash.hide();
-  // }, []);
+const SplashScreen = () => {
+  const RootStore = useStores();
+  useEffect(() => {
+    Splash.hide();
+
+    setTimeout(() => {
+      RootStore.setHasLoaded(true);
+    }, 1000);
+  }, []);
 
   return (
     <View style={styles.container}>

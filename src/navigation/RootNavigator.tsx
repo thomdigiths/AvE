@@ -1,16 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { observer } from 'mobx-react-lite';
 
 import AuthStack from './AuthStack';
-import { useStore } from 'stores';
+import { useStores } from 'stores';
 import { SplashScreen } from 'screens';
 import AppStack from './App/AppStack';
 
 const Stack = createStackNavigator();
 
 const RootNavigator = () => {
-  const RootStore = useStore();
+  const RootStore = useStores();
 
   return (
     <NavigationContainer>
@@ -27,4 +28,4 @@ const RootNavigator = () => {
   );
 };
 
-export default RootNavigator;
+export default observer(RootNavigator);
