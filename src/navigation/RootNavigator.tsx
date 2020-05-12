@@ -18,10 +18,10 @@ const RootNavigator = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {!RootStore.hasLoaded ? (
           <Stack.Screen name="Splash" component={SplashScreen} />
-        ) : RootStore.isAuthenticated ? (
-          <Stack.Screen name="App" component={AppStack} />
-        ) : (
+        ) : !RootStore.isAuthenticated ? (
           <Stack.Screen name="Auth" component={AuthStack} />
+        ) : (
+          <Stack.Screen name="App" component={AppStack} />
         )}
       </Stack.Navigator>
     </NavigationContainer>

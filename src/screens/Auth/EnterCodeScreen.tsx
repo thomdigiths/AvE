@@ -6,7 +6,7 @@ import { colors } from 'theme';
 const EnterCodeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>HOME</Text>
+      <Text>Enter code</Text>
     </View>
   );
 };
