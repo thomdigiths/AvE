@@ -1,5 +1,5 @@
 export default {
-  regular: 'montserrat',
-  bold: 'montserrat-bold',
+  regular: 'Montserrat-Regular',
+  bold: 'Montserrat-Bold',
   light: 'Montserrat-Light',
 };
