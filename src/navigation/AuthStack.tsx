@@ -8,7 +8,10 @@ const AuthStack = () => {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name="EnterCode" component={EnterCodeScreen}></Stack.Screen>
+      <Stack.Screen
+        name="EnterCode"
+        component={EnterCodeScreen}
+        options={{ headerShown: false }}></Stack.Screen>
     </Stack.Navigator>
   );
 };
